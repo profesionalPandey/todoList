@@ -4,6 +4,9 @@ import "./App.css";
 import User1 from "./User1";
 // alert("from load");
 import User from "./User";
+import Student from "./Student";
+import { useState } from "react"; //stateHook
+import Student1 from "./Student1";
 
 // all about the components rfc rcc
 function App() {
@@ -14,7 +17,8 @@ function App() {
   //   alert(data);
   // }
 
-  // check for rerendering
+  // using stateHooks
+  const [n, setN] = useState("Rahul");
   console.warn("___________check for rerendering__________");
   return (
     <div className="App">
@@ -42,10 +46,26 @@ function App() {
       <User />
       {/* rcc */}
       <User1 />
-      <h5>H5</h5>
+      <Student name={n} />
+      <button
+        onClick={() => {
+          setN("trainee");
+        }}
+      >
+        Update Name
+      </button>
+      <Student1 name="Rahul" email="trainee@thrymr.net" />
+      <Student1 name={"akash"} email="trainee@thrymr.net" />
+      {/* <Student
+        name={"rishi"}
+        email="trainee@thrymr.net"
+        other={{ address: "kapoorthala", mobile: "126" }}
+      /> */}
       {/* only used locally */}
       {/* <Apple/> */}
       {/* {Apple()} */}
+
+      <h5>App.js</h5>
     </div>
   );
 }

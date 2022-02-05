@@ -17,7 +17,7 @@ export function User() {
     setDataCal(dataCal + 1);
   }
   return (
-    <div>
+    <div style={{ backgroundColor: "lightgray", margin: 20, padding: 10 }}>
       <h1>Users component</h1>
       <p>a fn() based component</p>
       {/* calling{} native variable  */}
