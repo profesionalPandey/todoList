@@ -1,3 +1,4 @@
+// fn() based component***
 export function User(){
     return(
     <div>
@@ -5,5 +6,11 @@ export function User(){
     </div>
     )
 }
+
+// without using JSX
+// import React from "react"
+// function User(){
+//     return React.createElement(div,h1,"Users component");
+// }
 
 // export default User;

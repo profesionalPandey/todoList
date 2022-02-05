@@ -1,4 +1,6 @@
+// class based component
 import React,{Component} from 'react'
+// can export while deceleration 
 export default class User extends React.Component{
     render()
     {
@@ -9,4 +11,4 @@ export default class User extends React.Component{
         )
     }
 }
-rfc
+
