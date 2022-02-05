@@ -3,31 +3,25 @@ import "./App.css";
 //  calling with default
 import User1 from "./User1";
 // alert("from load");
+import User from "./User";
 
 // all about the components rfc rcc
 function App() {
-  // native variable 
-  let data="rahul pandey"
-
-  // nested component
-  // function Apple() {
-  //   alert("Fn() Function called");
+  // native variable !render
+  // let data="rahul pandey"
+  // function apple() {
+  //   data="trainee";
+  //   alert(data);
   // }
-  function apple() {
-    data="trainee";
-    alert(data);
-  }
 
+  // check for rerendering
+  console.warn("___________check for rerendering__________");
   return (
     <div className="App">
-     {/* calling{} native variable  */}
-     {/* using variable=!good practice */}
-      <h1>{data}</h1>
-
       {/* compiled as a alert when passed as() */}
       {/* <button onClick={Apple()}>Click me</button> */}
       {/* calling vai a fn() */}
-      <button onClick={apple}>Click me</button>
+      {/* <button onClick={apple}>Click me</button> */}
       {/* calling vai a ()=> using alert */}
       {/* <button
         onClick={() => {
@@ -56,13 +50,14 @@ function App() {
   );
 }
 
+// making a component withing the same file
 // fu() component without default can have n* no. in a file
-export function User() {
-  return (
-    <div>
-      <h1>Users component</h1>
-    </div>
-  );
-}
+// export function User() {
+//   return (
+//     <div>
+//       <h1>Users component</h1>
+//     </div>
+//   );
+// }
 
 export default App;
