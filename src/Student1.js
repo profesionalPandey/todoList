@@ -1,7 +1,7 @@
 import React from "react";
 
 export default class Student1 extends React.Component {
-  
+ 
     render() {
     //must in rcc
     console.log(this.props);
